@@ -48,8 +48,9 @@ At CodeFolder, we are committed to adding value to developers' lives in the foll
 
 ### Installation
 1. Clone the repository:
+    git clone
     ```bash
-    git clone https://github.com/yourusername/codefolder.git
+     https://github.com/Codefolder-dev/Codefolder-.git
     ```
 2. Navigate to the project directory:
     ```bash
