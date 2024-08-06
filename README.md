@@ -52,11 +52,11 @@ At CodeFolder, we are committed to adding value to developers' lives in the foll
     ```bash
      https://github.com/Codefolder-dev/Codefolder-.git
     ```
-2. Navigate to the project directory:
+3. Navigate to the project directory:
     ```bash
     cd codefolder
     ```
-3. Install dependencies:
+4. Install dependencies:
     ```bash
     npm install
     ```
