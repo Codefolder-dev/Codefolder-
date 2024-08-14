@@ -77,10 +77,13 @@ const MobileNavbar = () => {
                     <Link href="/languages" className="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" onClick={handleLinkClick}>
                         Tutorials
                     </Link>
-                    <Link href="/Projects/Html" className="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" onClick={handleLinkClick}>
+                    <Link href="/Dashboard" className="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" onClick={handleLinkClick}>
                         Projects
                     </Link>
-                    <Link href="" className="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" onClick={handleLinkClick}>
+                    <Link href="/playground" className="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" onClick={handleLinkClick}>
+                        Playground
+                    </Link>
+                     <Link href="" className="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" onClick={handleLinkClick}>
                         Guides
                     </Link>
                 </div>
