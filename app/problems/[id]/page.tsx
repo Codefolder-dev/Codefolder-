@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import CodeEditor from '../../../components/CodeEditor';
+import CodeEditor from '@/components/CodeEditor';
 
 const languageHandlers: { [key: string]: (code: string) => string } = {
   javascript: (code: string) => {

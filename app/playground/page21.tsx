@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import CodeEditor from '../../../components/CodeEditor';
+import CodeEditor from '@/components/CodeEditor';
 
 const Judge0API = {
   endpoint: 'https://api.judge0.com/submissions/?base64_encoded=false&wait=true',
