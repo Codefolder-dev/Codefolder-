@@ -16,7 +16,7 @@ type ProjectListProps = {
 
 const ProjectList: React.FC<ProjectListProps> = ({ projects, onProjectClick }) => {
   return (
-    <div className='grid grid-flow-row grid-cols-4 gap-10'>
+    <div className='grid grid-flow-row grid-cols-1 sm:grid-cols-4 gap-10'>
       {projects.map((project) => (
         <ProjectCard
           key={project.id}
