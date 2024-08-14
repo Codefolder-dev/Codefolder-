@@ -1,0 +1,20 @@
+/* custom-prism-theme.css */
+code[class*="language-"],
+pre[class*="language-"] {
+    background: #020041;
+    /* Darker background */
+    color: #f8f8f2;
+    /* Light text color */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 1.5em;
+    /* Larger padding */
+    overflow-x: auto;
+    /* Horizontal scrolling */
+    font-family: 'Fira Code', monospace;
+    /* Custom font */
+    font-size: 0.9rem;
+    /* Font size */
+    line-height: 1.5;
+    /* Line height */
+}

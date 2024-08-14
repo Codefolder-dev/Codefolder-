@@ -1,0 +1,33 @@
+[
+  {
+    "language": "JavaScript",
+    "projects": [
+      {
+        "id": 1,
+        "img":"/download.png",
+        "title": "JavaScript Project 1",
+        "description": "A project about JavaScript.",
+        "level": "beginner"
+      },
+      {
+        "id": 2,
+        "title": "JavaScript Project 2",
+        "img": "/download.png",
+        "description": "Another project about JavaScript.",
+        "level": "advanced"
+      }
+    ]
+  },
+  {
+    "language": "Python",
+    "projects": [
+      {
+        "id": 3,
+
+        "title": "Python Project 1",
+        "description": "A project about Python.",
+        "level": "intermediet"
+      }
+    ]
+  }
+]

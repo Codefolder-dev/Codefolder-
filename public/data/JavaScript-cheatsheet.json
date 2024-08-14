@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Variables",
+    "level": "beginner",
+
+    "content": "let, const, var are used to declare variables in JavaScript."
+  },
+  {
+    "title": "Functions",
+    "level": "advanced",
+
+    "content": "Functions can be declared with function keyword or as arrow functions."
+  }
+]

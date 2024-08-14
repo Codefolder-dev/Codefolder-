@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Practice",
+    "links": [
+      { "title": "Get started", "url": "/get-started" },
+      { "title": "DSA Questions", "url": "/dsa-questions" },
+      { "title": "Coding Questions", "url": "/coding-questions" },
+      { "title": "System Design Questions", "url": "/system-design-questions" }
+    ]
+  },
+  {
+    "title": "Resources",
+    "links": [
+      { "title": "Docs", "url": "/docs" },
+      { "title": "Playground", "url": "/playground" },
+      { "title": "Cheatsheet", "url": "/cheatsheet" },
+      { "title": "Ecosystem", "url": "/ecosystem" }
+    ]
+  },
+  {
+    "title": "Contact Us",
+    "links": [
+      { "title": "Community", "url": "/community" },
+      { "title": "Support", "url": "/support" },
+      { "title": "Enterprise", "url": "/enterprise" }
+    ]
+  },
+  {
+    "title": "Company",
+    "links": [
+      { "title": "About", "url": "/about" },
+      { "title": "Blog", "url": "/blog" },
+      { "title": "Careers", "url": "/careers" }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "href": "https://github.com/HuXn-WebDev/HTML-CSS-JavaScript-100-Projects/tree/main/01.bg-video",
+    "name": "BG Video",
+    "tags": ["html", "css", "js"],
+    "level": "intermediate",
+    "description": "A background video project."
+  },
+  {
+    "id": 2,
+    "href": "https://github.com/HuXn-WebDev/HTML-CSS-JavaScript-100-Projects/tree/main/02.Creative%20Loading%20Animation",
+    "name": "Creative Loading Animation",
+    "tags": ["html", "css"],
+    "level": "beginner",
+    "description": "A creative loading animation."
+  }
+]

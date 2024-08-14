@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "language": "javascript",
+    "title": "Two Sum",
+    "level": "beginner",
+
+    "description": "Given an array of integers, return indices of the two numbers such that they add up to a specific target.",
+    "example": "Input: nums = [2,7,11,15], target = 9. Output: [0,1]"
+  },
+  {
+    "id": "2",
+    "language": "python",
+    "level": "beginner",
+
+    "title": "Reverse String",
+    "description": "Write a function that reverses a string.",
+    "example": "Input: \"hello\". Output: \"olleh\""
+  }
+]

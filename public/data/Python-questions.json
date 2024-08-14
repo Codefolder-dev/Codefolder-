@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "question": "What is a lambda function in Python?",
+    "answer": "A lambda function is a small anonymous function that can have any number of arguments but only one expression."
+  },
+  {
+    "id": 2,
+    "question": "What are decorators in Python?",
+    "answer": "Decorators are a way to modify the behavior of a function or class."
+  }
+]
