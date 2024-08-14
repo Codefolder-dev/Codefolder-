@@ -18,7 +18,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
   const [theme, setTheme] = useState<'vs-dark' | 'light'>('vs-dark');
   const [fileName, setFileName] = useState('code');
   const [fileExtension, setFileExtension] = useState(language);
-  const [editorWidth, setEditorWidth] = useState(500); // Initial width in pixels
+  const [editorWidth, setEditorWidth] = useState(400); // Initial width in pixels
   const [editorHeight, setEditorHeight] = useState(600); // Initial height in pixels
 
   const editorRef = useRef<HTMLDivElement | null>(null);
@@ -206,10 +206,10 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
         />
         <div
           ref={resizeRef}
-          className='absolute right-0 bottom-0 w-5 h-5 bg-transparent cursor-se-resize text-white z-10'
+          className='absolute right-0 bottom-0 hover:w-24 text-xl hover:text-3xl w-5 h-5 bg-transparent cursor-se-resize text-white z-10'
           style={{ borderRadius: '0 0 0 2px' }}
         />
-    <GiResize className='absolute bottom-0 right-0 text-xl'/>
+    <GiResize className='absolute bottom-0 right-0  '/>
 
       </div>
     </div>
@@ -217,3 +217,4 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
 };
 
 export default CodeEditor;
+
