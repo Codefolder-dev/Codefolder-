@@ -48,15 +48,15 @@ const ProjectPage = () => {
   }
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h2>{project.title}</h2>
-      <div style={{ width: '100%', height: '300px', position: 'relative' }}>
+    <div  className='w-full h-screen px-5 py-20 sm:p-20 flex flex-col gap-5'>
+      <h2 className='sm:text-4xl text-2xl'>{project.title}</h2>
+      <div className='relative w-auto h-96 sm:h-full'>
         <Image
           src={project.img}
           alt={project.title}
           layout="fill"
           objectFit="cover"
-          style={{ borderRadius: '8px' }} // Optional styling
+        className='w-full sm:h-[30vh] rounded-xl'
         />
       </div>
       <p>{project.description}</p>

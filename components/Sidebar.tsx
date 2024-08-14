@@ -26,7 +26,7 @@ const Sidebar: React.FC<SidebarProps> = ({ languages, onSelectLanguage }) => {
   };
 
   return (
-    <div className='relative'>
+    <div className='relative z-10'>
       {/* Sidebar */}
       <div
         className={`${
@@ -68,7 +68,7 @@ const Sidebar: React.FC<SidebarProps> = ({ languages, onSelectLanguage }) => {
 
           <RiMenuUnfoldLine />
           </p>
- : <p className=' bg-zinc-800/20 border text-white border-gray-400/20 rounded-full p-2 text-xl '>
+ : <p className='left-40 bg-zinc-800/20 border text-white border-gray-400/20 rounded-full p-2 text-xl '>
 
           <RiMenuUnfoldLine />
           </p>

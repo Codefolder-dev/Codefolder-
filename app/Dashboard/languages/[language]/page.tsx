@@ -49,15 +49,15 @@ const LanguagePage = () => {
       <div className='flex gap-10'>
         <button
           onClick={handleCheatsheetClick}
-          className='bg-purple-600/70 px-6 py-2 rounded-xl text-xl '
+          className='bg-purple-600/70 sm:px-6 sm:py-2 rounded-lg px-2 py-1 sm:text-xl '
         >
-          View Cheatsheet
+           Cheatsheet
         </button>
         <button
           onClick={handleQuestionsClick}
-          className='bg-purple-600/70 px-6 py-2 rounded-xl text-xl '
+          className='bg-purple-600/70 sm:px-6 sm:py-2 px-2 py-1 rounded-lg sm:text-xl '
         >
-          View Interview Questions
+           Interview Questions
         </button>
       </div>
       <ProjectList projects={projects} onProjectClick={handleProjectClick} />
