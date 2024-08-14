@@ -46,7 +46,7 @@ const LanguageCheatsheetPage = () => {
   }, [selectedLevel, cheatsheetItems]);
 
   return (
-    <div  className='flex flex-col gap-10 sm:p-20'>
+    <div  className='flex flex-col gap-10 px-5 py-20 sm:p-20'>
       <div className='flex justify-between'>
               <h2 className='sm:text-4xl text-xl'>{language} Cheatsheet</h2>
       <Filter selectedLevel={selectedLevel} onLevelChange={setSelectedLevel} />

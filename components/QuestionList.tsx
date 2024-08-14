@@ -18,7 +18,7 @@ const QuestionList: React.FC<QuestionListProps> = ({
   onQuestionClick,
 }) => {
   return (
-    <div className='bg-slate-900'>
+    <div >
       {questions.map((q) => (
         <Accordion
           key={q.id}

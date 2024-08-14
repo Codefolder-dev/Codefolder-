@@ -52,9 +52,12 @@ const LanguageQuestionsPage = () => {
   };
 
   return (
-    <div style={{ padding: '20px' }} className='w-full'>
-      <h2>{language} Interview Questions</h2>
+    <div className='w-full sm:p-20 gap-5 px-5 py-20'>
+      <div className='flex sm:flex-row gap-5 flex-col sm:justify-between'>
+
+      <h2 className='sm:text-4xl text-xl'>{language} Interview Questions</h2>
       <Filter selectedLevel={selectedLevel} onLevelChange={setSelectedLevel} />
+      </div>
       <QuestionList questions={filteredQuestions} onQuestionClick={handleQuestionClick} />
     </div>
   );
