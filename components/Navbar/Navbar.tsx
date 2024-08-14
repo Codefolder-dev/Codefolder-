@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
                     <div className=' text-white text-sm font-semibold  flex flex-col gap-1'>
 
 
-                      <Link href='/HTML/HTML' className="group flex items-center justify-start    text-sm font-semibold  hover:underline">
+                      <Link href='' className="group flex items-center justify-start    text-sm font-semibold  hover:underline">
                         HTML <GoChevronRight className=' group-hover:opacity-100 text-xl  opacity-0' />
                       </Link>
                       <Link href='#' className="group flex items-center justify-start    text-sm font-semibold  hover:underline cursor-not-allowed">
@@ -111,7 +111,7 @@ const Navbar: React.FC = () => {
                     </div>
                   </div>
                   <div className='flex gap-10 p-10 justify-center items-center'>
-                    <Link href='' className='flex flex-col gap-5 group'>
+                    <Link href='/problems' className='flex flex-col gap-5 group'>
                       <div className='bg-zinc-700 border border-gray-500 rounded-full w-fit p-3 group group-hover:border-green-500/40'>
 
                         <FaCode className='bg-zinc-500 border border-gray-300 rounded-md p-1 text-2xl  group-hover:border-green-600 group-hover:bg-green-500/30' />
@@ -144,7 +144,7 @@ const Navbar: React.FC = () => {
                   </div>
                 </div>
                 <div className='border-t border-gray-400/10 flex justify-end flex-col  items-end p-5'>
-                  <Link href='' className='flex justify-center items-center gap-2 cursor-not-allowed'> Coding Challenge
+                  <Link href='/Dashboard' className='flex justify-center items-center gap-2 '> Coding Challenge
                     <IoArrowRedoCircleOutline /></Link>
                   <span className='text-gray-400/20 cursor-not-allowed'> Coming Soon</span>
                 </div>
