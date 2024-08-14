@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Fevicon from "/fevicon.png"
+import Fevicon from "@/public/fevicon.png"
 import Image from 'next/image';
 
-const Navbar = () => {
+const MobileNavbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleLinkClick = () => {
@@ -89,4 +89,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default MobileNavbar;
