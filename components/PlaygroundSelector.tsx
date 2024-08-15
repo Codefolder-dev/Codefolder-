@@ -4,15 +4,15 @@ import Dsa from "@/components/assets/images/Amazon.png"
 // Define images and texts for each option
 const cardData = {
   dsa: {
-    imgSrc: '/download.png',
+    imgSrc: '/dsa-new.webp',
     text: 'Improve your data structures and algorithms skills with a variety of problems.'
   },
   coding: {
-    imgSrc: '/download.png',
+    imgSrc: '/coding.jpeg',
     text: 'Practice coding problems across multiple programming languages.'
   },
   'web development': {
-    imgSrc: '/download.png',
+    imgSrc: '/web.png',
     text: 'Build and test web applications using HTML, CSS, and JavaScript.'
   }
 };
@@ -25,7 +25,7 @@ const PlaygroundSelector: React.FC<PlaygroundSelectorProps> = ({ onSelect }) => 
   };
 
   return (
-    <div style={{ padding: '20px', marginBottom: '20px' }} className='flex flex-col gap-10'>
+    <div style={{ padding: '20px', marginBottom: '20px' }} className='flex flex-col justify-center items-center w-full gap-10'>
       <h3 className='sm:text-4xl text-xl text-center'>Select Playground Type</h3>
       <div className='flex gap-4 sm:flex-row flex-col justify-center'>
         {options.map((option) => (

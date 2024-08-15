@@ -58,67 +58,79 @@ const PlaygroundPage = () => {
       return <ProblemsPage />;
     } else if (selectedPlayground === 'coding') {
       return (
-        <div>
+        <div className='w-full p-5'>
 
-        <div className='w-auto sm:hidden flex flex-col p-5 gap-4 justify-center items-center'>
-          <h2>Coding Practice Playground</h2>
-          <select
-            value={language}
-            onChange={(e) => setLanguage(e.target.value)}
-            className='bg-zinc-800 px-4 py-2 w-fit rounded-xl border border-gray-400/20'
-          >
-            <option value="javascript">JavaScript</option>
-            <option value="python">Python</option>
-            <option value="java">Java</option>
-            {/* Add more languages as needed */}
-          </select>
-          <div className='tabs flex justify-center items-center gap-20'>
-            <button onClick={() => setActiveTab('editor')} className={`tab-button ${activeTab === 'editor' ? 'active' : ''} bgzinc-900 text-white/80 border flex gap-3 items-center justify-center border-gray-400/20 px-4 py-1 rounded-lg` }>
+          <div className='w-full sm:hidden flex flex-col p-5 gap-4 justify-center items-center'>
+            <h2>Coding Practice Playground</h2>
+            <select
+              value={language}
+              onChange={(e) => setLanguage(e.target.value)}
+              className='bg-zinc-800 px-4 py-2 w-fit rounded-xl border text-white border-gray-400/20'
+            >
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              {/* Add more languages as needed */}
+            </select>
+            <div className='tabs flex justify-center items-center gap-20'>
+              <button onClick={() => setActiveTab('editor')} className={`tab-button ${activeTab === 'editor' ? 'active' : ''} bgzinc-900 text-white/80 border flex gap-3 items-center justify-center border-gray-400/20 px-4 py-1 rounded-lg`}>
                 Editor
                 <AiFillCode />
 
-            </button>
-            <button onClick={() => setActiveTab('output')} className={`tab-button ${activeTab === 'output' ? 'active' : ''} bgzinc-900 border text-white/80 flex justify-center items-center gap-3 border-gray-400/20 px-4 py-1 rounded-lg`}>
+              </button>
+              <button onClick={() => setActiveTab('output')} className={`tab-button ${activeTab === 'output' ? 'active' : ''} bgzinc-900 border text-white/80 flex justify-center items-center gap-3 border-gray-400/20 px-4 py-1 rounded-lg`}>
                 Output
-                <MdOutput/>
-            </button>
-          </div>
-          {activeTab === 'editor' && (
-            <CodeEditor
-              language={language}
-              value={code}
-              onChange={setCode}
-            />
-          )}
-          {activeTab === 'output' && (
-            <div style={{ marginTop: '20px', whiteSpace: 'pre-wrap' }}>
-              <button
-                onClick={executeCode}
-                style={{
-                  padding: '10px 20px',
-                  cursor: 'pointer',
-                  backgroundColor: '#0070f3',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '5px',
-                }}
-              >
-                Run
+                <MdOutput />
               </button>
-              <h3>Output:</h3>
-              <pre>{output}</pre>
             </div>
-          )}
-          </div>
-          <div className='sm:flex hidden gap-5'>
-            <div>
+            {activeTab === 'editor' && (
               <CodeEditor
-              language={language}
-              value={code}
-              onChange={setCode}
-            />
+                language={language}
+                value={code}
+                onChange={setCode}
+              />
+            )}
+            {activeTab === 'output' && (
+              <div style={{ marginTop: '20px', whiteSpace: 'pre-wrap' }}>
+                <button
+                  onClick={executeCode}
+                  style={{
+                    padding: '10px 20px',
+                    cursor: 'pointer',
+                    backgroundColor: '#0070f3',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '5px',
+                  }}
+                >
+                  Run
+                </button>
+                <h3>Output:</h3>
+                <pre>{output}</pre>
+              </div>
+            )}
+          </div>
+          <div className='sm:flex flex-col hidden w-full gap-5'>
+            <div>
+              <h2>Coding Practice Playground</h2>
+              <select
+                value={language}
+                onChange={(e) => setLanguage(e.target.value)}
+                className='bg-zinc-800 px-4 py-2 w-fit rounded-xl border text-white border-gray-400/20'
+              >
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                {/* Add more languages as needed */}
+              </select>
             </div>
-               <div className='w-full bg-zinc-900 p-5 border border-gray-400/20 rounded-lg'>
+            <div className='flex gap-5'>
+              <CodeEditor
+                language={language}
+                value={code}
+                onChange={setCode}
+              />
+            <div className='w-full bg-zinc-900 p-5 border  border-gray-400/20 rounded-lg'>
               <button
                 onClick={executeCode}
                 style={{
@@ -134,6 +146,7 @@ const PlaygroundPage = () => {
               </button>
               <h3>Output:</h3>
               <pre>{output}</pre>
+            </div>
             </div>
           </div>
         </div>
@@ -155,10 +168,10 @@ const PlaygroundPage = () => {
               <button onClick={() => setActiveTab('js')} className={`tab-button ${activeTab === 'js' ? 'active' : ''} bgzinc-900 border text-white/80 flex justify-center items-center gap-3 border-gray-400/20 px-4 py-1 rounded-lg`}>
                 JavaScript
               </button>
-                <button onClick={() => setActiveTab('output')} className={`tab-button ${activeTab === 'output' ? 'active' : ''} bgzinc-900 border text-white/80 flex justify-center items-center gap-3 border-gray-400/20 px-4 py-1 rounded-lg`}>
+              <button onClick={() => setActiveTab('output')} className={`tab-button ${activeTab === 'output' ? 'active' : ''} bgzinc-900 border text-white/80 flex justify-center items-center gap-3 border-gray-400/20 px-4 py-1 rounded-lg`}>
                 Output
-                <MdOutput/>
-            </button>
+                <MdOutput />
+              </button>
             </div>
             {activeTab === 'html' && (
               <CodeEditor
@@ -254,12 +267,12 @@ const PlaygroundPage = () => {
         </div>
       );
     } else {
-      return <div>Please select a playground type above.</div>;
+      return "";
     }
   };
 
   return (
-    <div className='h-auto'>
+    <div className='h-auto flex sm:justify-start sm:items-start justify-center items-center flex-col'>
       <PlaygroundSelector onSelect={setSelectedPlayground} />
       {renderPlayground()}
     </div>
