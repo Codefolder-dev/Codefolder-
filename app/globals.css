@@ -43,3 +43,27 @@ body {
 .input-field:hover {
   width: 350px; /* Width on hover */
 }
+
+
+
+/* Add this CSS to your global styles or a specific stylesheet */
+
+.code-scroll {
+  overflow: auto;
+  max-height: 150px; /* Set a max height to allow scrolling */
+}
+
+.code-scroll::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  height: 0;
+}
+
+.code-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  height: 0;
+}

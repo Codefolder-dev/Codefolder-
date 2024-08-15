@@ -1,6 +1,7 @@
 // components/ProjectCard.tsx
 import Image from 'next/image';
 import React from 'react';
+import { IoArrowForward } from "react-icons/io5";
 
 type ProjectCardProps = {
   id: number;
@@ -21,11 +22,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, img, 
       }}
       className=' w-auto'
     >
-      <Image src={img} alt='project img' width={2000} height={1000} className=' w-96 h-52 rounded-t-3xl' />
-      <div className=' border border-gray-400/40 rounded-b-2xl p-2 w-auto'>
+      <Image src={img} alt='project img' width={2000} height={1000} className=' w-96 h-52 rounded-t-xl' />
+      <div className=' border border-gray-400/40 bg-white text-slate-900 rounded-b-xl gap-5 flex flex-col  p-2 w-auto'>
 
-        <h3>{title}</h3>
+        <div>
+          <h3 className='sm:text-xl text-lg'>{title}</h3>
         <p>{description}</p>
+        </div>
+        <p className='bg-slate-900 text-white  px-3 py-1 rounded-md flex justify-between items-center text-lg'>Learn more <IoArrowForward />
+</p>
       </div>
     </div>
   );

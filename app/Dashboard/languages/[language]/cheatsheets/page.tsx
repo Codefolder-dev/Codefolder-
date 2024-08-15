@@ -11,6 +11,7 @@ type CheatsheetItem = {
   id: string;
   title: string;
   content: string;
+  code: string;
   level: string;
 };
 

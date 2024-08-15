@@ -1,14 +1,619 @@
 [
   {
-    "id": "variables",
-    "title": "Variables",
+    "id": "onPageScript",
+    "title": "On Page Script",
     "level": "beginner",
-    "content": "let, const, var are used to declare variables in JavaScript."
+    "content": "Adding internal JavaScript to HTML",
+    "code": "<script type=\"text/javascript\"> //JS code goes here </script>"
+  },
+  {
+    "id": "externalJSFile",
+    "title": "External JS File",
+    "level": "beginner",
+    "content": "Adding external JavaScript to HTML",
+    "code": "<script src=\"filename.js\"></script>"
   },
   {
     "id": "functions",
     "title": "Functions",
-    "level": "advanced",
-    "content": "Functions can be declared with function keyword or as arrow functions."
+    "level": "beginner",
+    "content": "JavaScript Function syntax",
+    "code": "function nameOfFunction() {\n    // function body \n}"
+  },
+  {
+    "id": "domElement",
+    "title": "DOM Element",
+    "level": "beginner",
+    "content": "Changing content of a DOM Element",
+    "code": "document.getElementById(\"elementID\").innerHTML = \"Hello World!\";"
+  },
+  {
+    "id": "output",
+    "title": "Output",
+    "level": "beginner",
+    "content": "This will print the value of a in JavaScript console",
+    "code": "console.log(a);"
+  },
+  {
+    "id": "conditionalStatements",
+    "title": "Conditional Statements",
+    "level": "beginner",
+    "content": "Conditional statements are used to perform operations based on some conditions.",
+    "code": ""
+  },
+  {
+    "id": "ifStatement",
+    "title": "If Statement",
+    "level": "beginner",
+    "content": "The block of code to be executed, when the condition specified is true.",
+    "code": "if (condition) {\n    // block of code to be executed if the condition is true\n}"
+  },
+  {
+    "id": "ifElseStatement",
+    "title": "If-else Statement",
+    "level": "beginner",
+    "content": "If the condition for the if block is false, then the else block will be executed.",
+    "code": "if (condition) {\n    // block of code to be executed if the condition is true\n} else {\n    // block of code to be executed if the condition is false\n}"
+  },
+  {
+    "id": "elseIfStatement",
+    "title": "Else-if Statement",
+    "level": "beginner",
+    "content": "A basic if-else ladder",
+    "code": "if (condition1) {\n    // block of code to be executed if condition1 is true\n} else if (condition2) {\n    // block of code to be executed if the condition1 is false and condition2 is true\n} else {\n    // block of code to be executed if the condition1 is false and condition2 is false\n}"
+  },
+  {
+    "id": "switchStatement",
+    "title": "Switch Statement",
+    "level": "beginner",
+    "content": "Switch case statement in JavaScript",
+    "code": "switch (expression) {\n    case x:\n        // code block\n        break;\n    case y:\n        // code block\n        break;\n    default:\n        // code block\n}"
+  },
+  {
+    "id": "iterativeStatements",
+    "title": "Iterative Statements (Loops)",
+    "level": "beginner",
+    "content": "Iterative statement facilitates  programmer to execute any block of code lines repeatedly and can be controlled as per conditions added by the programmer.",
+    "code": ""
+  },
+  {
+    "id": "forLoop",
+    "title": "For Loop",
+    "level": "beginner",
+    "content": "For loop syntax in javascript",
+    "code": "for (initialization; condition; incrementation;) {\n    // code block to be executed\n}\n\nExample:\n\nfor (let i = 0; i < 5; i++) {\n    text += \"Iteration number: \" + i + \"<br>\";\n}"
+  },
+  {
+    "id": "whileLoop",
+    "title": "While Loop",
+    "level": "beginner",
+    "content": "Runs the code till the specified condition is true",
+    "code": "while (condition) {\n    // code block to be executed\n}"
+  },
+  {
+    "id": "doWhileLoop",
+    "title": "Do While Loop",
+    "level": "beginner",
+    "content": "A do while loop is executed at least once despite the condition being true or false",
+    "code": "do {\n    // run this code in block\n    i++;\n} while (condition);"
+  },
+  {
+    "id": "strings",
+    "title": "Strings",
+    "level": "beginner",
+    "content": "The string is a sequence of characters that is used for storing and managing text data.",
+    "code": ""
+  },
+  {
+    "id": "charAtMethod",
+    "title": "charAt method",
+    "level": "beginner",
+    "content": "Returns the character from the specified index.",
+    "code": "str.charAt(3)"
+  },
+  {
+    "id": "concatMethod",
+    "title": "concat method",
+    "level": "beginner",
+    "content": "Joins two or more strings together.",
+    "code": "str1.concat(str2)"
+  },
+  {
+    "id": "indexOfMethod",
+    "title": "index of method",
+    "level": "beginner",
+    "content": "Returns the index of the first occurrence of the specified character from the string else -1 if not found.",
+    "code": "str.indexOf('substr')"
+  },
+  {
+    "id": "matchMethod",
+    "title": "match method",
+    "level": "beginner",
+    "content": "Searches a string for a match against a regular expression.",
+    "code": "str.match(/(chapter \\d+(\\.\\d)*)/i);"
+  },
+  {
+    "id": "replaceMethod",
+    "title": "replace method",
+    "level": "beginner",
+    "content": "Searches a string for a match against a specified string or char and returns a new string by replacing the specified values.",
+    "code": "str1.replace(str2)"
+  },
+  {
+    "id": "searchMethod",
+    "title": "search method",
+    "level": "beginner",
+    "content": "Searches a string against a specified value.",
+    "code": "str.search('term')"
+  },
+  {
+    "id": "splitMethod",
+    "title": "split method",
+    "level": "beginner",
+    "content": "Splits a string into an array consisting of substrings.",
+    "code": "str.split('\\n')"
+  },
+  {
+    "id": "substringMethod",
+    "title": "substring method",
+    "level": "beginner",
+    "content": "Returns a substring of a string containing characters from the specified indices.",
+    "code": "str.substring(0,5)"
+  },
+  {
+    "id": "arrays",
+    "title": "Arrays",
+    "level": "beginner",
+    "content": "The array is a collection of data items of the same type. In simple terms, it is a variable that contains multiple values.",
+    "code": ""
+  },
+  {
+    "id": "variable",
+    "title": "variable",
+    "level": "beginner",
+    "content": "Containers for storing data.",
+    "code": "var fruit = [\"element1\", \"element2\", \"element3\"];"
+  },
+  {
+    "id": "concatMethodArrays",
+    "title": "concat method",
+    "level": "beginner",
+    "content": "Joins two or more arrays together.",
+    "code": "array1.concat(array2)"
+  },
+  {
+    "id": "indexOfMethodArrays",
+    "title": "indexOf method",
+    "level": "beginner",
+    "content": "Returns the index of the specified item from the array.",
+    "code": "array.indexOf('item')"
+  },
+  {
+    "id": "joinMethod",
+    "title": "join method",
+    "level": "beginner",
+    "content": "Converts the array elements to a string.",
+    "code": "array.join(',')"
+  },
+  {
+    "id": "popMethod",
+    "title": "pop method",
+    "level": "beginner",
+    "content": "Deletes the last element of the array.",
+    "code": "array.pop()"
+  },
+  {
+    "id": "reverseMethod",
+    "title": "reverse method",
+    "level": "beginner",
+    "content": "This method reverses the order of the array elements.",
+    "code": "array.reverse()"
+  },
+  {
+    "id": "sortMethod",
+    "title": "sort method",
+    "level": "beginner",
+    "content": "Sorts the array elements in a specified manner.",
+    "code": "array.sort()"
+  },
+    {
+    "id": "toStringMethodArrays",
+    "title": "toString method",
+    "level": "beginner",
+    "content": "Converts the array elements to a string.",
+    "code": "array.toString()"
+  },
+  {
+    "id": "valueOfMethodArrays",
+    "title": "valueOf method",
+    "level": "beginner",
+    "content": "Returns the relevant Number Object holding the value of the argument passed.",
+    "code": "array.valueOf()"
+  },
+  {
+    "id": "numberMethods",
+    "title": "Number Methods",
+    "level": "beginner",
+    "content": "JS math and number objects provide several constants and methods to perform mathematical operations.",
+    "code": ""
+  },
+  {
+    "id": "toExponentialMethod",
+    "title": "toExponential method",
+    "level": "beginner",
+    "content": "Converts a number to its exponential form.",
+    "code": "num.toExponential()"
+  },
+  {
+    "id": "toPrecisionMethod",
+    "title": "toPrecision method",
+    "level": "beginner",
+    "content": "Formats a number into a specified length.",
+    "code": "num.toPrecision(4)"
+  },
+  {
+    "id": "toStringMethodNumbers",
+    "title": "toString method",
+    "level": "beginner",
+    "content": "Converts an object to a string.",
+    "code": "num.toString()"
+  },
+  {
+    "id": "valueOfMethodNumbers",
+    "title": "valueOf method",
+    "level": "beginner",
+    "content": "Returns the primitive value of a number.",
+    "code": "num.valueOf()"
+  },
+  {
+    "id": "mathMethods",
+    "title": "Math Methods",
+    "level": "beginner",
+    "content": "JavaScript provides various methods to perform mathematical operations.",
+    "code": ""
+  },
+  {
+    "id": "ceilMethod",
+    "title": "ceil method",
+    "level": "beginner",
+    "content": "Rounds a number upwards to the nearest integer, and returns the result.",
+    "code": "Math.ceil(x)"
+  },
+  {
+    "id": "expMethod",
+    "title": "exp method",
+    "level": "beginner",
+    "content": "Returns the value of E^x.",
+    "code": "Math.exp(x)"
+  },
+  {
+    "id": "logMethod",
+    "title": "log method",
+    "level": "beginner",
+    "content": "Returns the logarithmic value of x.",
+    "code": "Math.log(x)"
+  },
+  {
+    "id": "powMethod",
+    "title": "pow method",
+    "level": "beginner",
+    "content": "Returns the value of x to the power of y.",
+    "code": "Math.pow(x, y)"
+  },
+  {
+    "id": "randomMethod",
+    "title": "random method",
+    "level": "beginner",
+    "content": "Returns a random number between 0 and 1.",
+    "code": "Math.random()"
+  },
+  {
+    "id": "sqrtMethod",
+    "title": "sqrt method",
+    "level": "beginner",
+    "content": "Returns the square root of a number x.",
+    "code": "Math.sqrt(x)"
+  },
+  {
+    "id": "dates",
+    "title": "Dates",
+    "level": "beginner",
+    "content": "The Date object is used to get the year, month, and day. It has methods to get and set the day, month, year, hour, minute, and seconds.",
+    "code": ""
+  },
+  {
+    "id": "getDate",
+    "title": "Pulling Date from the Date object",
+    "level": "beginner",
+    "content": "Returns the date from the date object.",
+    "code": "date.getDate()"
+  },
+  {
+    "id": "getDay",
+    "title": "Pulling Day from the Date object",
+    "level": "beginner",
+    "content": "Returns the day from the date object.",
+    "code": "date.getDay()"
+  },
+  {
+    "id": "getHours",
+    "title": "Pulling Hours from the Date object",
+    "level": "beginner",
+    "content": "Returns the hours from the date object.",
+    "code": "date.getHours()"
+  },
+  {
+    "id": "getMinutes",
+    "title": "Pulling Minutes from the Date object",
+    "level": "beginner",
+    "content": "Returns the minutes from the date object.",
+    "code": "date.getMinutes()"
+  },
+  {
+    "id": "getSeconds",
+    "title": "Pulling Seconds from the Date object",
+    "level": "beginner",
+    "content": "Returns the seconds from the date object.",
+    "code": "date.getSeconds()"
+  },
+  {
+    "id": "getTime",
+    "title": "Pulling Time from the Date object",
+    "level": "beginner",
+    "content": "Returns the time from the date object.",
+    "code": "date.getTime()"
+  },
+  {
+    "id": "mouseEvents",
+    "title": "Mouse Events",
+    "level": "beginner",
+    "content": "Any change in the state of an object is referred to as an Event. With the help of JavaScript, you can handle events, i.e., how any specific HTML tag will work when the user does something.",
+    "code": ""
+  },
+  {
+    "id": "click",
+    "title": "click",
+    "level": "beginner",
+    "content": "Fired when an element is clicked.",
+    "code": "element.addEventListener('click', () => {\n    // Code to be executed when the event is fired\n});"
+  },
+  {
+    "id": "oncontextmenu",
+    "title": "oncontextmenu",
+    "level": "beginner",
+    "content": "Fired when an element is right-clicked.",
+    "code": "element.addEventListener('contextmenu', () => {\n    // Code to be executed when the event is fired\n});"
+  },
+  {
+    "id": "dblclick",
+    "title": "dblclick",
+    "level": "beginner",
+    "content": "Fired when an element is double-clicked.",
+    "code": "element.addEventListener('dblclick', () => {\n    // Code to be executed when the event is fired\n});"
+  },
+  {
+    "id": "mouseenter",
+    "title": "mouseenter",
+    "level": "beginner",
+    "content": "Fired when an element is entered by the mouse arrow.",
+    "code": "element.addEventListener('mouseenter', () => {\n    // Code to be executed when the event is fired\n});"
+  },
+  {
+    "id": "mouseleave",
+    "title": "mouseleave",
+    "level": "beginner",
+    "content": "Fired when an element is exited by the mouse arrow.",
+    "code": "element.addEventListener('mouseleave', () => {\n    // Code to be executed when the event is fired\n});"
+  },
+  {
+    "id": "mousemove",
+    "title": "mousemove",
+    "level": "beginner",
+    "content": "Fired when the mouse is moved inside the element.",
+    "code": "element.addEventListener('mousemove', () => {\n    // Code to be executed when the event is fired\n});"
+  },
+  {
+    "id": "keyboardEvents",
+    "title": "Keyboard Events",
+    "level": "beginner",
+    "content": "JavaScript can handle keyboard events when a user interacts with the keyboard.",
+    "code": ""
+  },
+  {
+    "id": "keydown",
+    "title": "keydown",
+    "level": "beginner",
+    "content": "Fired when the user is pressing a key on the keyboard.",
+    "code": "element.addEventListener('keydown', () => {\n    // Code to be executed when the event is fired\n});"
+  },
+  {
+    "id": "keypress",
+    "title": "keypress",
+    "level": "beginner",
+    "content": "Fired when the user presses the key on the keyboard.",
+    "code": "element.addEventListener('keypress', () => {\n    // Code to be executed when the event is fired\n});"
+  },
+  {
+    "id": "keyup",
+    "title": "keyup",
+    "level": "beginner",
+    "content": "Fired when the user releases a key on the keyboard.",
+    "code": "element.addEventListener('keyup', () => {\n    // Code to be executed when the event is fired\n});"
+  },
+  {
+    "id": "errors",
+    "title": "Errors",
+    "level": "beginner",
+    "content": "Errors are thrown by the compiler or interpreter whenever they find any fault in the code. JS provides some functions to handle errors.",
+    "code": ""
+  },
+    {
+    "id": "tryCatch",
+    "title": "try and catch",
+    "level": "beginner",
+    "content": "Try the code block and execute catch when an error is thrown.",
+    "code": "try {\n    // Block of code to try\n}\ncatch (err) {\n    // Block of code to handle errors\n}"
+  },
+  {
+    "id": "windowMethods",
+    "title": "Window Methods",
+    "level": "beginner",
+    "content": "Methods that are available from the window object.",
+    "code": ""
+  },
+  {
+    "id": "alertMethod",
+    "title": "alert method",
+    "level": "beginner",
+    "content": "Used to alert something on the screen.",
+    "code": "alert('Hello World!')"
+  },
+  {
+    "id": "blurMethod",
+    "title": "blur method",
+    "level": "beginner",
+    "content": "The blur() method removes focus from the current window.",
+    "code": "window.blur()"
+  },
+  {
+    "id": "setInterval",
+    "title": "setInterval",
+    "level": "beginner",
+    "content": "Keeps executing code at a certain interval.",
+    "code": "setInterval(() => {\n    // Code to be executed\n}, 1000);"
+  },
+  {
+    "id": "setTimeout",
+    "title": "setTimeout",
+    "level": "beginner",
+    "content": "Executes the code after a certain interval of time.",
+    "code": "setTimeout(() => {\n    // Code to be executed\n}, 1000);"
+  },
+  {
+    "id": "close",
+    "title": "close",
+    "level": "beginner",
+    "content": "The Window.close() method closes the current window.",
+    "code": "window.close()"
+  },
+  {
+    "id": "confirm",
+    "title": "confirm",
+    "level": "beginner",
+    "content": "The window.confirm() instructs the browser to display a dialog with an optional message, and to wait until the user either confirms or cancels.",
+    "code": "window.confirm('Are you sure?')"
+  },
+  {
+    "id": "open",
+    "title": "open",
+    "level": "beginner",
+    "content": "Opens a new window.",
+    "code": "window.open('https://www.example.com')"
+  },
+  {
+    "id": "prompt",
+    "title": "prompt",
+    "level": "beginner",
+    "content": "Prompts the user with a text and takes a value. The second parameter is the default value.",
+    "code": "var name = prompt('What is your name?', 'John');"
+  },
+  {
+    "id": "scrollBy",
+    "title": "scrollBy",
+    "level": "beginner",
+    "content": "Scrolls the window by the specified number of pixels.",
+    "code": "window.scrollBy(100, 0); // Scroll 100px to the right"
+  },
+  {
+    "id": "scrollTo",
+    "title": "scrollTo",
+    "level": "beginner",
+    "content": "Scrolls the document to the specified coordinates.",
+    "code": "window.scrollTo(500, 0); // Scroll to horizontal position 500"
+  },
+  {
+    "id": "clearInterval",
+    "title": "clearInterval",
+    "level": "beginner",
+    "content": "Clears the setInterval. The variable is the value returned by the setInterval call.",
+    "code": "clearInterval(intervalID);"
+  },
+  {
+    "id": "clearTimeout",
+    "title": "clearTimeout",
+    "level": "beginner",
+    "content": "Clears the setTimeout. The variable is the value returned by the setTimeout call.",
+    "code": "clearTimeout(timeoutID);"
+  },
+  {
+    "id": "stop",
+    "title": "stop",
+    "level": "beginner",
+    "content": "Stops the further resource loading.",
+    "code": "window.stop()"
+  },
+  {
+    "id": "queryGetElements",
+    "title": "Query/Get Elements",
+    "level": "beginner",
+    "content": "The browser creates a DOM (Document Object Model) whenever a web page is loaded, and with the help of HTML DOM, one can access and modify all the elements of the HTML document.",
+    "code": ""
+  },
+  {
+    "id": "querySelector",
+    "title": "querySelector",
+    "level": "beginner",
+    "content": "Selector to select the first matching element.",
+    "code": "document.querySelector('css-selector')"
+  },
+  {
+    "id": "querySelectorAll",
+    "title": "querySelectorAll",
+    "level": "beginner",
+    "content": "A selector to select all matching elements.",
+    "code": "document.querySelectorAll('css-selector')"
+  },
+  {
+    "id": "getElementsByTagName",
+    "title": "getElementsByTagName",
+    "level": "beginner",
+    "content": "Select elements by tag name.",
+    "code": "document.getElementsByTagName('element-name')"
+  },
+  {
+    "id": "getElementsByClassName",
+    "title": "getElementsByClassName",
+    "level": "beginner",
+    "content": "Select elements by class name.",
+    "code": "document.getElementsByClassName('class-name')"
+  },
+  {
+    "id": "getElementById",
+    "title": "Get Element by Id",
+    "level": "beginner",
+    "content": "Select an element by its id.",
+    "code": "document.getElementById('id')"
+  },
+  {
+    "id": "creatingElements",
+    "title": "Creating Elements",
+    "level": "beginner",
+    "content": "Create new elements in the DOM.",
+    "code": ""
+  },
+  {
+    "id": "createElement",
+    "title": "createElement",
+    "level": "beginner",
+    "content": "Create a new element.",
+    "code": "document.createElement('div')"
+  },
+  {
+    "id": "createTextNode",
+    "title": "createTextNode",
+    "level": "beginner",
+    "content": "Create a new text node.",
+    "code": "document.createTextNode('some text here')"
   }
+
 ]

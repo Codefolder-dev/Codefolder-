@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { IoCopyOutline, IoShareOutline } from 'react-icons/io5';
 
 type CheatsheetItem = {
-  id: string; // Ensure id is used here
+  id: string;
   title: string;
   content: string;
+  code: string;
 };
 
 type CheatsheetProps = {
@@ -13,15 +14,14 @@ type CheatsheetProps = {
 };
 
 const Cheatsheet: React.FC<CheatsheetProps> = ({ items, language }) => {
-  // Track which item has been copied
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
 
   const handleCopy = (content: string, index: number) => {
     navigator.clipboard.writeText(content).then(
       () => {
-        setCopiedIndex(index); // Set the index of the copied item
+        setCopiedIndex(index);
         setTimeout(() => {
-          setCopiedIndex(null); // Reset the copied index after 5 seconds
+          setCopiedIndex(null);
         }, 5000);
       },
       (err) => {
@@ -44,10 +44,10 @@ const Cheatsheet: React.FC<CheatsheetProps> = ({ items, language }) => {
   };
 
   return (
-    <div className='text-black grid grid-flow-row gap-5 grid-cols-1 sm:grid-cols-4 h-auto'>
+    <div className='text-black grid grid-flow-row gap-5 grid-cols-1 sm:grid-cols-4 w-auto h-auto'>
       {items.map((item, index) => (
         <div
-          id={item.id} // Use id for scrolling
+          id={item.id}
           key={item.id}
           style={{
             marginBottom: '10px',
@@ -61,13 +61,13 @@ const Cheatsheet: React.FC<CheatsheetProps> = ({ items, language }) => {
               padding: '10px',
               fontWeight: 'bold',
             }}
-            className='border-b border-gray-400/20 flex justify-between items-center'
+            className='border-b border-gray-400/20 bg-white text-black flex justify-between items-center'
           >
             <span>{item.title}</span>
             <div className='flex space-x-2'>
               <button
                 onClick={() => handleCopy(item.content, index)}
-                className={`border border-gray-400/20 text-white/60 font-bold py-1 px-2 rounded ${
+                className={`border border-gray-800/70 text-gray-700 font-bold py-1 px-2 rounded ${
                   copiedIndex === index ? 'border-gray-400/20' : ''
                 }`}
               >
@@ -75,14 +75,19 @@ const Cheatsheet: React.FC<CheatsheetProps> = ({ items, language }) => {
               </button>
               <button
                 onClick={() => handleShare(item.id, item.title)}
-                className='border border-gray-400/20 text-white/60 font-bold py-1 px-2 rounded'
+                className='border border-gray-800/70 text-gray-700 font-bold py-1 px-2 rounded'
               >
                 <IoShareOutline />
               </button>
             </div>
           </div>
-          <div style={{ padding: '10px' }}>
+          <div style={{ padding: '10px' }} className='flex flex-col gap-2'>
             <p>{item.content}</p>
+            {item.code && (
+              <code className='code-scroll bg-black/30 px-3 py-2 rounded-md'>
+                {item.code}
+              </code>
+            )}
           </div>
         </div>
       ))}
