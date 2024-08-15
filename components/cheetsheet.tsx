@@ -44,7 +44,7 @@ const Cheatsheet: React.FC<CheatsheetProps> = ({ items, language }) => {
   };
 
   return (
-    <div className='text-black grid grid-flow-row gap-5 grid-cols-1 sm:grid-cols-4 w-auto h-auto'>
+    <div className='text-black grid grid-flow-row gap-5 grid-cols-1 lg:grid xl:grid-cols-4 w-auto h-auto'>
       {items.map((item, index) => (
         <div
           id={item.id}

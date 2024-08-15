@@ -56,7 +56,7 @@ export default function RootLayout({
   return (
       <div className='flex w-full bg-cyan-900 h-[90vh] overflow-hidden '>
           <Sidebar languages={languages} onSelectLanguage={handleSelectLanguage} />
-      <main className=' overflow-y-scroll bg-cyan-900'>
+      <main className=' overflow-y-scroll w-full bg-cyan-900'>
 
               {children}
           </main>

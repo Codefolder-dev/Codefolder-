@@ -48,15 +48,15 @@ const ProjectPage = () => {
   }
 
   return (
-    <div  className='w-full h-screen px-5 py-20 sm:p-20 flex flex-col gap-5'>
+    <div  className='w-screen xl:w-auto h-screen px-5 py-20 sm:p-20 flex flex-col gap-5'>
       <h2 className='sm:text-4xl text-2xl'>{project.title}</h2>
-      <div className='relative w-auto h-96 sm:h-full'>
+      <div className='relative w-full h-96 sm:h-full'>
         <Image
           src={project.img}
           alt={project.title}
           layout="fill"
-          objectFit="cover"
-        className='w-full sm:h-[30vh] rounded-xl'
+          // objectFit="cover"
+        className='xl:w-full sm:h-[30vh] rounded-xl'
         />
       </div>
       <p>{project.description}</p>

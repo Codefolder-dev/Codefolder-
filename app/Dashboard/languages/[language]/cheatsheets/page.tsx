@@ -1,5 +1,3 @@
-// app/languages/[language]/cheatsheets/page.tsx
-
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -60,7 +58,7 @@ const LanguageCheatsheetPage = () => {
   }, [filteredCheatsheetItems]);
 
   return (
-    <div className='flex flex-col gap-10 px-5 py-20 sm:p-20'>
+    <div className='flex flex-col gap-10 px-5 py-20 lg:p-10  xl:p-20'>
       <div className='flex sm:flex-row gap-5 flex-col sm:justify-between'>
         <h2 className='sm:text-4xl text-xl'>{language} Cheatsheet</h2>
         <Filter selectedLevel={selectedLevel} onLevelChange={setSelectedLevel} />
