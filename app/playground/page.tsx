@@ -58,7 +58,7 @@ const PlaygroundPage = () => {
       return <ProblemsPage />;
     } else if (selectedPlayground === 'coding') {
       return (
-        <div className='w-full p-5'>
+        <div className='w-full p-5' id="coding" >
 
           <div className='w-full sm:hidden flex flex-col p-5 gap-4 justify-center items-center'>
             <h2>Coding Practice Playground</h2>
@@ -154,7 +154,7 @@ const PlaygroundPage = () => {
       );
     } else if (selectedPlayground === 'web development') {
       return (
-        <div>
+        <div id="web development" >
 
           <div className='sm:hidden flex flex-col p-5 gap-5 justify-center items-center'>
             <h2 className='bgzinc-900 border text-white/80 flex justify-center items-center gap-3 border-gray-400/20 px-4 py-1 rounded-lg'>Web Development Playground</h2>

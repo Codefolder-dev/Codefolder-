@@ -23,7 +23,7 @@ const ProblemsPage = () => {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div className='w-full p-5' id="dsa">
       <h2>DSA Problems</h2>
       <div style={{ marginBottom: '20px' }}>
         <h3>Problems List:</h3>

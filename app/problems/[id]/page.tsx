@@ -64,8 +64,8 @@ const ProblemPage = ({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h2>{problem.title}</h2>
+    <div style={{ padding: '20px' }} className='flex flex-col gap-4'>
+      <h2 className='bg-zinc-900 sm:text-xl border border-gray-400/30 rounded-lg w-fit px-3 py-1 font-semibold'>{problem.title}</h2>
       <p>{problem.description}</p>
       <p><strong>Example:</strong> {problem.example}</p>
 
@@ -74,6 +74,7 @@ const ProblemPage = ({ params }: { params: { id: string } }) => {
           value={language}
           onChange={handleLanguageChange}
           style={{ padding: '10px', fontSize: '16px' }}
+          className='bg-zinc-900 border border-gray-400/30 rounded-lg'
         >
           <option value="javascript">JavaScript</option>
           <option value="python">Python</option>
@@ -98,6 +99,7 @@ const ProblemPage = ({ params }: { params: { id: string } }) => {
           color: 'white',
           border: 'none',
           borderRadius: '5px',
+          width:'5vw'
         }}
       >
         Submit
