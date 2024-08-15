@@ -2,7 +2,7 @@ import React from 'react';
 import { PlaygroundSelectorProps, PlaygroundType } from '../types';
 
 const PlaygroundSelector: React.FC<PlaygroundSelectorProps> = ({ onSelect }) => {
-  const options: PlaygroundType[] = ['dsa', 'web development'];
+  const options: PlaygroundType[] = ['dsa','coding', 'web development'];
 
   const handleSelection = (option: PlaygroundType) => {
     onSelect(option); // Correctly invoke the onSelect function with the selected playground type

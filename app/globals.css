@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -30,4 +17,29 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+\\/* Add this CSS to your global stylesheet or use inline styles in your component */
+
+
+.customization-modal label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.customization-modal input {
+  margin-left: 10px;
+}
+
+
+.input-field {
+  background: rgba(51, 51, 51, 0.2); /* bg-zinc-800/20 equivalent */
+  border: 1px solid rgba(169, 169, 169, 0.3); /* border-gray-400/30 equivalent */
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 200px; /* Initial width */
+  transition: width 0.3s ease; /* Smooth transition for width */
+}
+
+.input-field:hover {
+  width: 350px; /* Width on hover */
 }

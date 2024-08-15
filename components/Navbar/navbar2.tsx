@@ -2,34 +2,35 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Fevicon from "@/public/fevicon.png"
 import Image from 'next/image';
+import Fevicon from "@/public/fevicon2.png";
+import GlobalSearch from '../globalSearch';
 
 const MobileNavbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleLinkClick = () => {
         setIsOpen(false);
+        setTimeout(() => setIsOpen(false), 2000); // Close the menu after 2 seconds
     };
 
+    const toggleMenu = () => setIsOpen(prev => !prev);
+
     return (
-        <nav className="bg-black/20  sm:hidden block">
+        <nav className="bg-black/20 sm:hidden block">
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div className="relative flex items-center justify-between h-16">
-
                     <Link href='/' className='relative flex gap-2 justify-center items-center'>
-                        <Image src={Fevicon} alt='codefolder icon' width={32}/>
-                        <h1>
-                            codefolder
-                        </h1>
+                        <Image src={Fevicon} alt='codefolder icon' width={32} />
+                        <h1>codefolder</h1>
                     </Link>
                     <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                         <button
                             type="button"
-                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400   focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                             aria-controls="mobile-menu"
-                            aria-expanded="false"
-                            onClick={() => setIsOpen(!isOpen)}
+                            aria-expanded={isOpen}
+                            onClick={toggleMenu}
                         >
                             <span className="sr-only">Open main menu</span>
                             {isOpen ? (
@@ -83,9 +84,10 @@ const MobileNavbar = () => {
                     <Link href="/playground" className="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" onClick={handleLinkClick}>
                         Playground
                     </Link>
-                     <Link href="" className="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" onClick={handleLinkClick}>
+                    <Link href="" className="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" onClick={handleLinkClick}>
                         Guides
                     </Link>
+                    <GlobalSearch />
                 </div>
             </div>
         </nav>

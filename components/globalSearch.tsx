@@ -48,20 +48,14 @@
     };
 
     return (
-      <div style={{ position: 'relative' }} className='w-96 flex'>
-        <input
-          type="text"
-          value={query}
-          onChange={handleChange}
-          placeholder="Search projects..."
-          style={{
-            width: '20vw',
-            padding: '10px',
-            borderRadius: '5vw',
-
-          }}
-          className=' bg-zinc-800/20 border border-gray-400/30'
-        />
+      <div className='relative w-96 flex'>
+     <input
+      type="text"
+      value={query}
+      onChange={handleChange}
+      placeholder="Search projects..."
+      className="input-field"
+    />
         {searchResults.length > 0 && (
           <div
             style={{

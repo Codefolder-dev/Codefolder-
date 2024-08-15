@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import PlaygroundSelector from '@/components/PlaygroundSelector';
 import CodeEditor from '@/components/CodeEditor';
 import { PlaygroundType } from '@/types';
+import ProblemsPage from '../problems/page';
 
 const PlaygroundPage = () => {
   const [selectedPlayground, setSelectedPlayground] = useState<PlaygroundType | null>(null);
@@ -53,77 +54,47 @@ const PlaygroundPage = () => {
     switch (selectedPlayground) {
       case 'dsa':
         return (
-          <div style={{ padding: '20px' }} className='flex flex-col gap-5'>
-            <h2 className='sm:text-xl'>DSA Practice Playground</h2>
+<ProblemsPage/>
+        );
+      case 'coding':
+        return (
+          <div style={{ padding: '20px' }}>
+            <h2>Coding Practice Playground</h2>
             <select
               value={language}
               onChange={(e) => setLanguage(e.target.value)}
-              className='bg-zinc-800 border border-gray-400/20 rounded-xl px-3 py-2 text-white w-fit' >
+              style={{ padding: '10px', fontSize: '16px', marginBottom: '20px' }}
+            >
               <option value="javascript">JavaScript</option>
               <option value="python">Python</option>
               <option value="java">Java</option>
               {/* Add more languages as needed */}
             </select>
-            <div className='flex sm:flex-row flex-col gap-5 '>
-              <CodeEditor
-                language={language}
-                value={code}
-                onChange={setCode}
-              />
-              <div className='flex flex-col p-4 rounded-lg border border-gray-400/20 bg-zinc-800/60 w-full'>
-                <button
-                  onClick={executeCode}
-                  className='bg-purple-600/70 w-fit px-8 rounded-xl font-semibold py-2'
-                >
-                  Run
-                </button>
-                <div style={{ marginTop: '20px', whiteSpace: 'pre-wrap' }}>
-                  <h3>Output:</h3>
-                  <pre>{output}</pre>
-                </div>
-              </div>
+            <CodeEditor
+              language={language}
+              value={code}
+              onChange={setCode}
+            />
+            <button
+              onClick={executeCode}
+              style={{
+                padding: '10px 20px',
+                marginTop: '20px',
+                cursor: 'pointer',
+                backgroundColor: '#0070f3',
+                color: 'white',
+                border: 'none',
+                borderRadius: '5px',
+              }}
+            >
+              Run
+            </button>
+            <div style={{ marginTop: '20px', whiteSpace: 'pre-wrap' }}>
+              <h3>Output:</h3>
+              <pre>{output}</pre>
             </div>
           </div>
         );
-      // case 'coding':
-      //   return (
-      //     <div style={{ padding: '20px' }}>
-      //       <h2>Coding Practice Playground</h2>
-      //       <select
-      //         value={language}
-      //         onChange={(e) => setLanguage(e.target.value)}
-      //         style={{ padding: '10px', fontSize: '16px', marginBottom: '20px' }}
-      //       >
-      //         <option value="javascript">JavaScript</option>
-      //         <option value="python">Python</option>
-      //         <option value="java">Java</option>
-      //         {/* Add more languages as needed */}
-      //       </select>
-      //       <CodeEditor
-      //         language={language}
-      //         value={code}
-      //         onChange={setCode}
-      //       />
-      //       <button
-      //         onClick={executeCode}
-      //         style={{
-      //           padding: '10px 20px',
-      //           marginTop: '20px',
-      //           cursor: 'pointer',
-      //           backgroundColor: '#0070f3',
-      //           color: 'white',
-      //           border: 'none',
-      //           borderRadius: '5px',
-      //         }}
-      //       >
-      //         Run
-      //       </button>
-      //       <div style={{ marginTop: '20px', whiteSpace: 'pre-wrap' }}>
-      //         <h3>Output:</h3>
-      //         <pre>{output}</pre>
-      //       </div>
-      //     </div>
-      //   );
       case 'web development':
         return (
           <div style={{ padding: '20px' }} >

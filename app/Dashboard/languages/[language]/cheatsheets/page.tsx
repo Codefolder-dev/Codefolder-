@@ -1,4 +1,5 @@
 // app/languages/[language]/cheatsheets/page.tsx
+
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -7,6 +8,7 @@ import Cheatsheet from '@/components/cheetsheet';
 import Filter from '@/components/Filter';
 
 type CheatsheetItem = {
+  id: string;
   title: string;
   content: string;
   level: string;
@@ -45,13 +47,24 @@ const LanguageCheatsheetPage = () => {
     }
   }, [selectedLevel, cheatsheetItems]);
 
+  useEffect(() => {
+    // Scroll to the card if a specific ID is present in the URL hash
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      const element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }, [filteredCheatsheetItems]);
+
   return (
-    <div  className='flex flex-col gap-10 px-5 py-20 sm:p-20'>
+    <div className='flex flex-col gap-10 px-5 py-20 sm:p-20'>
       <div className='flex sm:flex-row gap-5 flex-col sm:justify-between'>
-              <h2 className='sm:text-4xl text-xl'>{language} Cheatsheet</h2>
-      <Filter selectedLevel={selectedLevel} onLevelChange={setSelectedLevel} />
-</div>
-      <Cheatsheet items={filteredCheatsheetItems} />
+        <h2 className='sm:text-4xl text-xl'>{language} Cheatsheet</h2>
+        <Filter selectedLevel={selectedLevel} onLevelChange={setSelectedLevel} />
+      </div>
+      <Cheatsheet items={filteredCheatsheetItems} language={language} />
     </div>
   );
 };

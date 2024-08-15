@@ -8,6 +8,7 @@ type Question = {
   id: number;
   question: string;
   answer: string;
+  explain: string;
 };
 
 const QuestionDetailPage = () => {
@@ -41,6 +42,7 @@ const QuestionDetailPage = () => {
     <div style={{ padding: '20px' }}>
       <h2>{question.question}</h2>
       <p>{question.answer}</p>
+       <p>{question.explain}</p>
     </div>
   );
 };

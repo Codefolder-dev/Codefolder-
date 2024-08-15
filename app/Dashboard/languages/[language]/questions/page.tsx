@@ -1,4 +1,5 @@
 // app/languages/[language]/questions/page.tsx
+
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -54,11 +55,10 @@ const LanguageQuestionsPage = () => {
   return (
     <div className='w-full sm:p-20 gap-5 px-5 py-20'>
       <div className='flex sm:flex-row gap-5 flex-col sm:justify-between'>
-
-      <h2 className='sm:text-4xl text-xl'>{language} Interview Questions</h2>
-      <Filter selectedLevel={selectedLevel} onLevelChange={setSelectedLevel} />
+        <h2 className='sm:text-4xl text-xl'>{language} Interview Questions</h2>
+        <Filter selectedLevel={selectedLevel} onLevelChange={setSelectedLevel} />
       </div>
-      <QuestionList questions={filteredQuestions} onQuestionClick={handleQuestionClick} />
+      <QuestionList questions={filteredQuestions} onQuestionClick={handleQuestionClick} language={language} />
     </div>
   );
 };

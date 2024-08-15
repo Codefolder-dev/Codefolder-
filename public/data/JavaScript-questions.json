@@ -4,13 +4,26 @@
     "question": "What is a closure in JavaScript?",
     "level": "beginner",
 
-    "answer": "A closure is a function that remembers its outer variables and can access them."
+    "answer": "A closure is a function that remembers its outer variables and can access them.Functions can be declared with function keyword or as arrow functions  A closure is a function that remembers its outer variables and can access them.Functions can be declared with function keyword or as arrow functions ",
+    "explain": "var is function-scoped, while let and const are block-scoped. const cannot be reassigned.",
+    "expl2": "var is function-scoped, while let and const are block-scoped. const cannot be reassigned var is function-scoped, while let and const are block-scoped. const cannot be reassigned."
   },
   {
     "id": 2,
     "question": "What is the difference between var, let, and const?",
     "level": "advanced",
 
-    "answer": "var is function-scoped, while let and const are block-scoped. const cannot be reassigned."
+    "answer": "var is function-scoped, while let and const are block-scoped. const cannot be reassigned.",
+    "explain": "var is function-scoped, while let and const are block-scoped. const cannot be reassigned.",
+    "expl2": "var is function-scoped, while let and const are block-scoped. const cannot be reassigned var is function-scoped, while let and const are block-scoped. const cannot be reassigned."
+  },
+  {
+    "id": 3,
+    "question": "What is the difference betweebhkb fnn var, let, and const?",
+    "level": "advanced",
+
+    "answer": "var is function-scoped, while let and const are block-scoped. const cannot be reassigned.",
+    "explain": "var is function-scoped, while let and const are block-scoped. const cannot be reassigned.",
+    "expl2": "var is function-scoped, while let and const are block-scoped. const cannot be reassigned var is function-scoped, while let and const are block-scoped. const cannot be reassigned."
   }
 ]
