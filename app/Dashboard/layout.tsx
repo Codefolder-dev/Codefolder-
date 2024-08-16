@@ -54,9 +54,9 @@ export default function RootLayout({
     router.push(`/Dashboard/languages/${language}`);
   };
   return (
-      <div className='flex w-full bg-cyan-900 h-[90vh] overflow-hidden '>
+      <div className='flex w-screen bg-cyan-900 h-screen overflow-hidden '>
           <Sidebar languages={languages} onSelectLanguage={handleSelectLanguage} />
-      <main className=' overflow-y-scroll w-full bg-cyan-900'>
+      <main className=' overflow-y-scroll w-screen bg-cyan-900 py-10'>
 
               {children}
           </main>

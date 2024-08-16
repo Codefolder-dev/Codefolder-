@@ -48,13 +48,13 @@
     };
 
     return (
-      <div className='relative w-96 flex'>
+      <div className='relative w-auto flex'>
      <input
       type="text"
       value={query}
       onChange={handleChange}
       placeholder="Search projects..."
-      className="input-field"
+      className=" px-3 py-1 border border-gray-400/30 bg-transparent rounded-md"
     />
         {searchResults.length > 0 && (
           <div

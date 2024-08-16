@@ -51,12 +51,12 @@ const Sidebar: React.FC<SidebarProps> = ({ languages, onSelectLanguage }) => {
   };
 
   return (
-    <div className='relative z-10'>
+    <div className='relative z-10 '>
       {/* Sidebar */}
       <div
         className={`${
           isOpen ? 'w-[250px]' : 'w-0'
-        } transition-width duration-300 border-r border-gray-400/30 absolute z-10 bg-slate-950/50 backdrop-blur-3xl h-screen sm:relative overflow-hidden`}
+        } transition-width duration-300 border-r py-20 border-gray-400/30 absolute z-10 bg-slate-950/50 backdrop-blur-3xl h-screen sm:relative overflow-hidden`}
       >
         {isOpen && (
           <div className='p-5'>
@@ -85,12 +85,12 @@ const Sidebar: React.FC<SidebarProps> = ({ languages, onSelectLanguage }) => {
       {/* Toggle Button */}
       <button
         onClick={toggleSidebar}
-        className={`absolute z-50 text-white top-2 left-2 ${
+        className={`absolute z-50 text-white top-2 py-20 left-2 ${
           isOpen ? '-translate-x-full' : 'translate-x-0'
         } transition-transform duration-300`}
       >
         {isOpen ? (
-          <p className='left-48 z-50 bg-zinc-800/20 text-white border border-gray-400/20 rounded-full p-2 text-xl absolute'>
+          <p className='left-44 z-50 bg-zinc-800/20 text-white border border-gray-400/20 rounded-full p-2 text-xl absolute'>
             <RiMenuUnfoldLine />
           </p>
         ) : (

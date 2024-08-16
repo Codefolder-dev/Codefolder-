@@ -44,7 +44,7 @@ export default function RootLayout({
         ></script>
         {/* <!-- End Google Tag Manager --> */}
       </head>
-      <body className="bg-slate-950 text-white">
+      <body className="bg-slate-950 w-screen overflow-x-hidden text-white">
         <Navbar/>
 <MobileNavbar/>
         {children}

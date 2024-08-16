@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <main className="hidden sm:flex sticky  items-center space-x-4 p-4  top-0 bg-slate-950 backdrop-blur-lg   z-50  justify-between sm:px-28 text-white  border-b border-gray-700/30">
+    <main className="hidden sm:flex fixed w-screen  items-center space-x-4 p-4  top-0 bg-slate-950 backdrop-blur-lg   z-50  justify-between lg:px-10 xl:px-28 text-white  border-b border-gray-700/30">
       <Link href="/" className="hover:underline  sm:text-xl flex justify-center items-center gap-2">
         <Image src={Fevicon} alt='Codefolder Icon' width={32} />
         <h1 className='font-semibold  font-sans'>
